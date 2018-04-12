@@ -5,14 +5,32 @@
   margin: auto;
 }
 
+.carousel-inner {
+  width: 1.5in;
+  height: 1.5in !important;
+}
+
+.icon {
+  width: 0.6in !important;
+  height: 0.6in !important;
+}
+
+.item {
+  width: 1.5in;
+  height: 1.5in !important;
+}
+
 .item h1 {
+  padding: auto;
+  margin-top: 0.2in auto;
   font-size: 0.4in;
   text-align: center;
-  height: 1in;
-  line-height: 1in;
+  height: 0.4in;
+  line-height: 0.4in;
 }
 
 .item h2 {
+  margin-top: 14px;
   text-align: center;
   font-size: 0.2in;
 }

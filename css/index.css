@@ -8,6 +8,14 @@
 .carousel-inner {
   width: 1.5in;
   height: 1.5in !important;
+  background-color: #191414;
+}
+
+.chevron {
+  color: #cccccc;
+  width: 0.5in !important;
+  height: 0.5in !important;
+  margin-top: 0.6in;
 }
 
 .icon {
@@ -27,12 +35,15 @@
   text-align: center;
   height: 0.4in;
   line-height: 0.4in;
+  color: #cccccc;
 }
 
 .item h2 {
   margin-top: 14px;
   text-align: center;
   font-size: 0.2in;
+  color: #cccccc;
+  height: 0.4in;
 }
 
 .item img {

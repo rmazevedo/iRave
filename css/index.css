@@ -3,6 +3,7 @@
   height: 1.5in !important;
   padding: 0;
   margin: auto;
+  background-color: #191414;
 }
 
 .carousel-inner {
@@ -82,10 +83,26 @@
   text-align: center !important;
   line-height: 0.4in !important;
   margin: 0 auto !important;
+  color: #999999;
 }
 
 .item img {
   margin: 0.1in auto;
   width:1in;
   height:1in;
+}
+
+.page {
+  margin: 100px auto 0 auto;
+  padding: 0;
+  display: block; border:solid #000 1px;
+  width: 1.5in;
+  height: 1.5in !important;
+  background-color: #191414;
+}
+.content {
+    padding:0;
+    overflow: scroll; overflow-x:hidden;
+    height:100%
+    /*-webkit-overflow-scrolling: touch;*/    
 }

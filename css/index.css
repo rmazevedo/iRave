@@ -31,6 +31,12 @@
   height: 0.6in !important;
 }
 
+.notification {
+  height: 0.35in !important;
+  width: 0.35in !important;
+  z-index: 4
+  }
+
 .item {
   width: 1.5in;
   height: 1.5in !important;
@@ -66,7 +72,7 @@
   color: #DDDDDD;
   height: 0.4in !important;
   line-height: 0.4in !important;
-  margin: 0 auto !important; 
+  margin: 0 auto !important;
 }
 
 .stage h2 {
@@ -75,7 +81,7 @@
   font-size: 0.2in !important;
   color: #cccccc !important;
   line-height: 0.25in !important;
-  margin: 0 auto; 
+  margin: 0 auto;
 }
 
 .stage h3 {
@@ -101,8 +107,16 @@
   background-color: #191414;
 }
 .content {
+    text-align: justify;
     padding:0;
     overflow: scroll; overflow-x:hidden;
     height:100%
-    /*-webkit-overflow-scrolling: touch;*/    
+    /*-webkit-overflow-scrolling: touch;*/
+}
+
+.poster-image {
+   height: 1.5in !important;
+   width: 1.5in !important;
+   background-position: center;
+   z-index: -1;
 }

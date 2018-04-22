@@ -9,63 +9,95 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/index.css">
+    <script src="index.js"></script>
   </head>
 
   <body>
     <div class="container" style="margin-top:20px;">
-      <div id="stageCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner">
-          <div class="item stage active">
-            <h3>Palco 1</h3>
-            <h2>Dia 1</h2>
-            <h2>22:00 - 4:00</h2>
-            <a href="poster-list-concerts.html">
-              <img class="chevron-down" src="img/chevron-down.png">
-            </a>
+      <div class="row">
+        <div class="col-xs-2">
+          <div style="text-align:center;">
+            <button type="reset" class="btn btn-up">
+              <img src="img/up.png" alt="">
+            </button>
           </div>
-
-          <div class="item stage">
-            <h3>Palco 2</h3>
-            <h2>Dia 1</h2>
-            <h2>22:00 - 4:00</h2>
-            <a href="poster-list-concerts-2.html">
-              <img class="chevron-down" src="img/chevron-down.png">
-            </a>
-          </div>
-
-          <div class="item stage">
-            <h3>Palco 3</h3>
-            <h2>Dia 1</h2>
-            <h2>22:00 - 4:00</h2>
-            <a href="poster-list-concerts-3.html">
-              <img class="chevron-down" src="img/chevron-down.png">
-            </a>
-          </div>
-
-          <div class="item stage">
-            <h3>Palco 4</h3>
-            <h2>Dia 1</h2>
-            <h2>22:00 - 4:00</h2>
-            <a href="poster-list-concerts-4.html">
-              <img class="chevron-down" src="img/chevron-down.png">
-            </a>
+          <div style="text-align:center;">
+            <button type="reset" class="btn btn-down">
+              <img src="img/down.png" alt="">
+            </button>
           </div>
         </div>
-        <!-- Left and right controls -->
-        <a class="left carousel-control" href="#stageCarousel" data-slide="prev">
-          <img class="chevron" src="img/chevron-left.png" style="margin-left: -0.1in">
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="right carousel-control" href="#stageCarousel" data-slide="next">
-          <img class="chevron" src="img/chevron-right.png" style="margin-left: -0.17in;">
-          <span class="sr-only">Next</span>
-        </a>
+
+        <div class="col-xs-8">
+          <div id="stageCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+              <div class="item stage active">
+                <h3>Palco 1</h3>
+                <h2>Dia 1</h2>
+                <h2>22:00 - 4:00</h2>
+                <a href="poster-list-concerts.html">
+                  <img class="chevron-down" src="img/chevron-down.png">
+                </a>
+              </div>
+
+              <div class="item stage">
+                <h3>Palco 2</h3>
+                <h2>Dia 1</h2>
+                <h2>22:00 - 4:00</h2>
+                <a href="poster-list-concerts-2.html">
+                  <img class="chevron-down" src="img/chevron-down.png">
+                </a>
+              </div>
+
+              <div class="item stage">
+                <h3>Palco 3</h3>
+                <h2>Dia 1</h2>
+                <h2>22:00 - 4:00</h2>
+                <a href="poster-list-concerts-3.html">
+                  <img class="chevron-down" src="img/chevron-down.png">
+                </a>
+              </div>
+
+              <div class="item stage">
+                <h3>Palco 4</h3>
+                <h2>Dia 1</h2>
+                <h2>22:00 - 4:00</h2>
+                <a href="poster-list-concerts-4.html">
+                  <img class="chevron-down" src="img/chevron-down.png">
+                </a>
+              </div>
+            </div>
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#stageCarousel" data-slide="prev">
+              <img class="chevron" src="img/chevron-left.png" style="margin-left: -0.1in">
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#stageCarousel" data-slide="next">
+              <img class="chevron" src="img/chevron-right.png" style="margin-left: -0.17in;">
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+          <!-- carousel -->
+        </div>
+
+        <div class="col-xs-2">
+          <div style="text-align:center;">
+            <button type="reset" class="btn btn-reset" onclick="goBack()">
+              <img src="img/undo.png" alt="">
+            </button>
+          </div>
+          <div style="text-align:center;">
+            <button type="reset" class="btn btn-back" onclick="goHome()">
+              <img src="img/home.png" alt="">
+            </button>
+          </div>
+        </div>
+
       </div>
-      <!-- carousel -->
+      <!-- row -->
     </div>
     <!-- container -->
-
   </body>
 
 </html>

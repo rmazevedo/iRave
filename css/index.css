@@ -1,9 +1,13 @@
+body {
+  background-color: #EEEEEE;
+}
+
 .container {
-  width: 1.5in;
+  width: 2.2in;
   height: 1.5in !important;
   padding: 0;
   margin: auto;
-  background-color: #191414;
+  /* background-color: #191414; */
 }
 
 .carousel-inner {
@@ -99,7 +103,7 @@
 }
 
 .page {
-  margin: 20px auto 0 auto;
+  margin: 0px auto 0 auto;
   padding: 0;
   display: block; border:solid #000 1px;
   width: 1.5in;
@@ -119,4 +123,33 @@
    width: 1.5in !important;
    background-position: center;
    z-index: -1;
+}
+
+.btn {
+  height: 0.3in;  
+  width: 0.3in;
+  margin: auto;
+}
+
+.btn-reset {
+  margin-top: 0.3in;
+}
+
+.btn-back {
+  margin-top: 0.3in;
+}
+
+.btn img {
+  height: 0.2in;
+  width: 0.2in;        
+  margin-left: -8px;
+  margin-top: -9px;
+}
+
+.btn-up {
+  margin-top: 0.3in;
+}
+
+.btn-down {
+  margin-top: 0.3in;
 }

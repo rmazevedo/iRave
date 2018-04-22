@@ -10,51 +10,86 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="index.js"></script>
   </head>
 
   <body>
     <div class="container" style="margin-top:20px;">
-      <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner">
-          <div class="item active">
-            <h1>19:31</h1>
-            <img class="icon" src="img/iRave-icon.png" alt="Los Angeles">
+      <div class="row">
+        <div class="col-xs-2">
+          <div style="text-align:center;">
+            <button type="reset" class="btn btn-up">
+              <img src="img/up.png" alt="">
+            </button>
           </div>
-
-          <div class="item">
-            <a href="map.html">
-              <img src="img/map.png">
-              <h2>Mapa</h2>
-            </a>
+          <div style="text-align:center;">
+            <button type="reset" class="btn btn-down">
+              <img src="img/down.png" alt="">
+            </button>
           </div>
-
-          <div class="item">
-            <a href="poster.html">
-              <img src="img/guitar.png">
-              <h2>Cartaz</h2>
-            </a>
-          </div>
-
-          <div class="item">
-            <a href="notifications.html">
-              <img src="img/alarm.png">
-              <h2>Notificações</h2>
-            </a>
-          </div>
-
         </div>
-        <!-- Left and right controls -->
-        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-          <img class="chevron" src="img/chevron-left.png" style="margin-left: -0.1in">
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="right carousel-control" href="#myCarousel" data-slide="next">
-          <img class="chevron" src="img/chevron-right.png" style="margin-left: -0.17in;">
-          <span class="sr-only">Next</span>
-        </a>
+
+        <div class="col-xs-8">
+          <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+              <div class="item active">
+                <h1>19:31</h1>
+                <img class="icon" src="img/iRave-icon.png" alt="Los Angeles">
+              </div>
+
+              <div class="item">
+                <a href="map.html">
+                  <img src="img/map.png">
+                  <h2>Mapa</h2>
+                </a>
+              </div>
+
+              <div class="item">
+                <a href="poster.html">
+                  <img src="img/guitar.png">
+                  <h2>Cartaz</h2>
+                </a>
+              </div>
+
+              <div class="item">
+                <a href="notifications.html">
+                  <img src="img/alarm.png">
+                  <h2>Notificações</h2>
+                </a>
+              </div>
+
+            </div>
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+              <img class="chevron" src="img/chevron-left.png" style="margin-left: -0.1in">
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+              <img class="chevron" src="img/chevron-right.png" style="margin-left: -0.17in;">
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+          <!-- carousel -->
+        </div>
+
+
+
+        <div class="col-xs-2">
+          <div style="text-align:center;">
+            <button type="reset" class="btn btn-back" onclick="goBack()">
+              <img src="img/undo.png" alt="">
+            </button>
+          </div>
+          <div style="text-align:center;">
+            <button type="reset" class="btn btn-reset" onclick="goHome()">
+              <img src="img/home.png" alt="">
+            </button>
+          </div>
+        </div>
+
       </div>
-      <!-- carousel -->
+      <!-- row -->
     </div>
     <!-- container -->
 

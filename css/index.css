@@ -16,10 +16,21 @@ body {
   background-color: #191414;
 }
 
+.chevron-left {
+  margin-left: -0.08in;
+  background-image: linear-gradient(to right,rgba(0,0,0,.000) 0,rgba(0,0,0,0) 100%) !important;
+}
+
+
+.chevron-right {
+  margin-right: -0.07in;
+  background-image: linear-gradient(to right,rgba(0,0,0,.000) 0,rgba(0,0,0,0) 100%) !important;
+}
+
 .chevron {
   color: #cccccc;
-  width: 0.5in !important;
-  height: 0.5in !important;
+  width: 0.35in !important;
+  height: 0.35in !important;
   margin-top: 0.6in;
 }
 
@@ -126,7 +137,7 @@ body {
 }
 
 .btn {
-  height: 0.3in;  
+  height: 0.3in;
   width: 0.3in;
   margin: auto;
 }
@@ -141,7 +152,7 @@ body {
 
 .btn img {
   height: 0.2in;
-  width: 0.2in;        
+  width: 0.2in;
   margin-left: -8px;
   margin-top: -9px;
 }

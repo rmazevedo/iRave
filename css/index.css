@@ -46,11 +46,24 @@ body {
   height: 0.6in !important;
 }
 
+.btn-icon {
+  background-color: #191414;
+  width: 0.25in;
+  margin: auto 0.6in;
+  padding: 0;
+  border: 0;
+  color: #999999
+}
+
+p .material-icons {
+  font-size: 14px;
+}
+
 .notification {
-  height: 0.35in !important;
-  width: 0.35in !important;
-  z-index: 4
-  }
+  height: 0.25in !important;
+  width: 0.25in !important;
+  margin: 0 !important;
+}
 
 .item {
   width: 1.5in;
@@ -71,13 +84,26 @@ body {
   margin-top: 14px;
   text-align: center;
   font-size: 0.2in;
-  color: #cccccc;
+  color: #999999;
   height: 0.4in;
 }
 
 .item h3 {
   font-size: 0.2in;
   text-align: center;
+}
+
+.item-notification h2 {
+  margin-top: 14px;
+  text-align: center;
+  font-size: 0.12in;
+  color: #999999;
+  height: 0.4in;
+}
+
+.item-notification p {
+    margin: 0.1in 0.2in;
+    color: #CCCCCC
 }
 
 .stage h1 {
@@ -124,7 +150,7 @@ body {
 .content {
     text-align: justify;
     padding:0;
-    overflow: scroll; overflow-x:hidden;
+    overflow: hidden; overflow-x:hidden;
     height:100%
     /*-webkit-overflow-scrolling: touch;*/
 }

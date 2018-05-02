@@ -13,7 +13,7 @@
     <script src="index.js"></script>
   </head>
 
-  <body>
+  <body onload="loadNotifications()">
     <div class="container" style="margin-top:20px;">
       <div class="row">
         <div class="col-xs-2">
@@ -33,48 +33,6 @@
           <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
             <!-- Wrapper for slides -->
             <div class="carousel-inner">
-              <div class="item item-notification active">
-                <h2 style="height:0.2in">Red Hot Chilli Peppers</h2>
-                <p>
-                  <i class="material-icons">date_range</i> Dia 1
-                  <br>
-                  <i class="material-icons">access_time</i> 22:00 - 00:00
-                  <br>
-                  <i class="material-icons">location_on</i> Palco 3
-                </p>
-                <button class="btn-icon" type="button" name="button">
-                  <i class="material-icons">delete</i>
-                </button>
-              </div>
-
-              <div class="item  item-notification">
-                <h2 style="height:0.2in">Beatles</h2>
-                <p>
-                  <i class="material-icons">date_range</i> Dia 1
-                  <br>
-                  <i class="material-icons">access_time</i> 22:00 - 00:00
-                  <br>
-                  <i class="material-icons">location_on</i> Palco 3
-                </p>
-                <button class="btn-icon" type="button" name="button">
-                  <i class="material-icons">delete</i>
-                </button>
-              </div>
-
-              <div class="item  item-notification">
-                <h2 style="height:0.2in">Rihana</h2>
-                <p>
-                  <i class="material-icons">date_range</i> Dia 1
-                  <br>
-                  <i class="material-icons">access_time</i> 22:00 - 00:00
-                  <br>
-                  <i class="material-icons">location_on</i> Palco 3
-                </p>
-                <button class="btn-icon" type="button" name="button">
-                  <i class="material-icons">delete</i>
-                </button>
-              </div>
-
             </div>
             <!-- Left and right controls -->
             <a class="left carousel-control chevron-left" href="#myCarousel" data-slide="prev">

@@ -1,14 +1,28 @@
 function loadData() {
-    var shows = [
-        { 'id': 0, 'band': "Beatles", 'day': 2, 'start_time': "23:00", 'end_time': "00:30", 'stage': "3", 'notify': true },
-        { 'id': 1, 'band': "Rihana", 'day': 1, 'start_time': "23:00", 'end_time': "00:30", 'stage': "3", 'notify': false },
-        { 'id': 2, 'band': "Justin Bieber", 'day': 1, 'start_time': "22:00", 'end_time': "23:00", 'stage': "3", 'notify': false },
-        { 'id': 3, 'band': "Beyoncé", 'day': 1, 'start_time': "22:00", 'end_time': "23:00", 'stage': "1", 'notify': false },
+      var ctrl = status.control;
 
-    ];
+      var shows = [
+          { 'id': 0, 'band': "Red Hot Chili Peppers", 'day': 1, 'start_time': "23:00", 'end_time': "00:30", 'stage': "1", 'notify': false },
+          { 'id': 1, 'band': "Eminem", 'day': 1, 'start_time': "23:00", 'end_time': "00:30", 'stage': "2", 'notify': false },
+          { 'id': 2, 'band': "Metallica", 'day': 1, 'start_time': "22:00", 'end_time': "23:00", 'stage': "3", 'notify': false },
+          { 'id': 3, 'band': "Katy Perry", 'day': 1, 'start_time': "22:00", 'end_time': "23:00", 'stage': "4", 'notify': false },
 
-    // Put the object into storage
-    localStorage.setItem('shows', JSON.stringify(shows));
+      ];
+      var status = [
+        {'control': 0},];
+
+      // Put the object into storage
+
+      localStorage.setItem('shows', JSON.stringify(shows));
+      localStorage.setItem('status', JSON.stringify(status));
+
+}
+
+function changeFormat(){
+  document.getElementById("bt").innerHTML='check';
+  window.onload();
+
+
 }
 
 function loadNotifications() {
@@ -81,6 +95,7 @@ function deleteNotification(id) {
 
 function addNotification(id) {
     var retrievedObject = localStorage.getItem('shows');
+
     var shows = JSON.parse(retrievedObject);
     shows[id].notify = true;
 

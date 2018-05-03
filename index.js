@@ -103,3 +103,35 @@ function addNotification(id) {
     localStorage.setItem('shows', JSON.stringify(shows));
     //location.reload();
 }
+
+
+function loadStage(stage) {
+    var retrievedObject = localStorage.getItem('shows');
+    var shows = JSON.parse(retrievedObject);
+
+    for (var i = 0; i < shows.length; i++) {
+        if (shows[i].stage == stage) {
+          if(shows[i].notify){
+            var html = '<div class="item" id="myAnchor1' + shows[i].id + '">' +
+                '<h3>' + shows[i].start_time + ' - ' + shows[i].end_time + '</h3>' +
+                '<h2>' + shows[i].band + '</h2>' +
+                '<button class="btn-icon" type="button" name="button" onclick="addNotification(' + shows[i].id + '),changeFormat()">' +
+                '<i id="bt" class="material-icons">check</i>' +
+                '</button>' +
+                '</div >';
+          } else {
+            var html = '<div class="item" id="myAnchor1' + shows[i].id + '">' +
+                '<h3>' + shows[i].start_time + ' - ' + shows[i].end_time + '</h3>' +
+                '<h2>' + shows[i].band + '</h2>' +
+                '<button class="btn-icon" type="button" name="button" onclick="addNotification(' + shows[i].id + '),changeFormat()">' +
+                '<i id="bt" class="material-icons">notifications</i>' +
+                '</button>' +
+                '</div >';
+            $(".content").append(html);
+          }
+
+      $(".content").append(html);
+
+        }
+    }
+}

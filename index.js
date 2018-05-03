@@ -1,14 +1,19 @@
 function loadData() {
-    var shows = [
-        { 'id': 0, 'band': "Beatles", 'day': 2, 'start_time': "23:00", 'end_time': "00:30", 'stage': "3", 'notify': true },
-        { 'id': 1, 'band': "Rihana", 'day': 1, 'start_time': "23:00", 'end_time': "00:30", 'stage': "3", 'notify': false },
-        { 'id': 2, 'band': "Justin Bieber", 'day': 1, 'start_time': "22:00", 'end_time': "23:00", 'stage': "3", 'notify': false },
-        { 'id': 3, 'band': "Beyoncé", 'day': 1, 'start_time': "22:00", 'end_time': "23:00", 'stage': "1", 'notify': false },
+    var retrievedObject = localStorage.getItem('shows');
+    var shows = JSON.parse(retrievedObject);
 
-    ];
+    if (!shows) {
+        var shows = [
+            { 'id': 0, 'band': "Beatles", 'day': 2, 'start_time': "23:00", 'end_time': "00:30", 'stage': "1", 'notify': false },
+            { 'id': 1, 'band': "Rihana", 'day': 1, 'start_time': "23:00", 'end_time': "00:30", 'stage': "3", 'notify': false },
+            { 'id': 2, 'band': "Justin Bieber", 'day': 1, 'start_time': "22:00", 'end_time': "23:00", 'stage': "3", 'notify': false },
+            { 'id': 3, 'band': "Beyoncé", 'day': 1, 'start_time': "22:00", 'end_time': "23:00", 'stage': "1", 'notify': false },
 
-    // Put the object into storage
-    localStorage.setItem('shows', JSON.stringify(shows));
+        ];
+
+        // Put the object into storage
+        localStorage.setItem('shows', JSON.stringify(shows));
+    }
 }
 
 function loadNotifications() {
@@ -86,4 +91,23 @@ function addNotification(id) {
 
     localStorage.setItem('shows', JSON.stringify(shows));
     location.reload();
+}
+
+function loadStage1() {
+    var retrievedObject = localStorage.getItem('shows');
+    var shows = JSON.parse(retrievedObject);
+
+    for (var i = 0; i < shows.length; i++) {
+        if (shows[i].stage == "1") {
+            var html = '<div class="item" id="myAnchor1' + shows[i].id + '">' +
+                '<h3>' + shows[i].start_time + ' - ' + shows[i].end_time + '</h3>' +
+                '<h2>' + shows[i].band + '</h2>' +
+                '<button class="btn-icon" type="button" name="button" onclick="addNotification(' + shows[i].id + ')">' +
+                '<i class="material-icons">notifications</i>' +
+                '</button>' +
+                '</div >';
+            $(".content").append(html);
+        }
+    }
+
 }

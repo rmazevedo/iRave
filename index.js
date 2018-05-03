@@ -1,26 +1,27 @@
 function loadData() {
-      var ctrl = status.control;
+  var retrievedObject = localStorage.getItem('shows');
+  var shows = JSON.parse(retrievedObject);
 
-      var shows = [
-          { 'id': 0, 'band': "Red Hot Chili Peppers", 'day': 1, 'start_time': "23:00", 'end_time': "00:30", 'stage': "1", 'notify': false },
-          { 'id': 1, 'band': "Eminem", 'day': 1, 'start_time': "23:00", 'end_time': "00:30", 'stage': "2", 'notify': false },
-          { 'id': 2, 'band': "Metallica", 'day': 1, 'start_time': "22:00", 'end_time': "23:00", 'stage': "3", 'notify': false },
-          { 'id': 3, 'band': "Katy Perry", 'day': 1, 'start_time': "22:00", 'end_time': "23:00", 'stage': "4", 'notify': false },
+  if(!shows){
+    var shows = [
+        { 'id': 0, 'band': "Red Hot Chili Peppers", 'day': 1, 'start_time': "23:00", 'end_time': "00:30", 'stage': "1", 'notify': false },
+        { 'id': 1, 'band': "Eminem", 'day': 1, 'start_time': "23:00", 'end_time': "00:30", 'stage': "2", 'notify': false },
+        { 'id': 2, 'band': "Metallica", 'day': 1, 'start_time': "22:00", 'end_time': "23:00", 'stage': "3", 'notify': false },
+        { 'id': 3, 'band': "Katy Perry", 'day': 1, 'start_time': "22:00", 'end_time': "23:00", 'stage': "4", 'notify': false },
 
-      ];
-      var status = [
-        {'control': 0},];
+    ];
 
-      // Put the object into storage
+    // Put the object into storage
 
-      localStorage.setItem('shows', JSON.stringify(shows));
-      localStorage.setItem('status', JSON.stringify(status));
+    localStorage.setItem('shows', JSON.stringify(shows));
+
+  }
 
 }
 
 function changeFormat(){
   document.getElementById("bt").innerHTML='check';
-  window.onload();
+  //window.onload();
 
 
 }
@@ -100,5 +101,5 @@ function addNotification(id) {
     shows[id].notify = true;
 
     localStorage.setItem('shows', JSON.stringify(shows));
-    location.reload();
+    //location.reload();
 }

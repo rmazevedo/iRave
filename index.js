@@ -101,6 +101,8 @@ function addNotification(id) {
     shows[id].notify = true;
 
     localStorage.setItem('shows', JSON.stringify(shows));
+
+    var timer = setInterval(showAlert, 5000);
     //location.reload();
 }
 
@@ -134,4 +136,14 @@ function loadStage(stage) {
 
         }
     }
+}
+
+function showAlert(){
+  document.getElementById("alertsuccess").style.display="block";
+}
+
+function closeAlert(){
+  var div1 = document.getElementById("alertsuccess");
+  div1.style.opacity='0';
+  setTimeout(function(){div1.style.display="none";},600);
 }

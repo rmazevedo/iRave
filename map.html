@@ -20,12 +20,12 @@
       <div class="row">
         <div class="col-xs-2">
           <div style="text-align:center;">
-            <button type="reset" class="btn btn-up">
+            <button type="reset" class="btn btn-up" onclick="map.zoomIn()">
               <img src="img/up.png" alt="">
             </button>
           </div>
           <div style="text-align:center;">
-            <button type="reset" class="btn btn-down">
+            <button type="reset" class="btn btn-down" onclick="map.zoomOut()">
               <img src="img/down.png" alt="">
             </button>
           </div>
@@ -35,15 +35,16 @@
             <div id="image-map">
                 <script>
                   var map = L.map('image-map', {
+                    zoomControl: false,
                     minZoom: 1,
                     maxZoom: 4,
                     center: [0, 0],
-                    zoom: 1,
+                    zoom: 0,
                     crs: L.CRS.Simple
                   });
 
-                  var w = 2000,
-                      h = 1500,
+                  var w = 1000,
+                      h = 750,
                       url = "img/recinto.png";
 
                   var southWest = map.unproject([0, h], map.getMaxZoom()-1);

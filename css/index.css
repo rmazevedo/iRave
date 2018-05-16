@@ -22,6 +22,13 @@ body {
   background-color: #EEEEEE;
 }
 
+#image-map {
+  width: 1.5in;
+  height: 1.5in;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
 .container {
   width: 2.2in;
   height: 1.5in !important;

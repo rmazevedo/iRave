@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css">
     <link rel="stylesheet" type="text/css" href="css/index.css">
+    <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
     <script src="index.js"></script>
   </head>
 
@@ -30,8 +32,30 @@
         </div>
 
         <div class="col-xs-8">
-          <h1>Mapa [TODO]</h1>
-        </div>
+            <div id="image-map">
+                <script>
+                  var map = L.map('image-map', {
+                    minZoom: 1,
+                    maxZoom: 4,
+                    center: [0, 0],
+                    zoom: 1,
+                    crs: L.CRS.Simple
+                  });
+
+                  var w = 2000,
+                      h = 1500,
+                      url = "img/recinto.png";
+
+                  var southWest = map.unproject([0, h], map.getMaxZoom()-1);
+                  var northEast = map.unproject([w, 0], map.getMaxZoom()-1);
+                  var bounds = new L.LatLngBounds(southWest, northEast);
+
+                  L.imageOverlay(url, bounds).addTo(map);
+
+                  map.setMaxBounds(bounds);
+                </script>
+              </div>
+          </div>
         <div class="col-xs-2">
           <div style="text-align:center;">
             <button type="reset" class="btn btn-reset" onclick="goBack()">

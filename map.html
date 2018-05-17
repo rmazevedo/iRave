@@ -10,7 +10,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css">
     <link rel="stylesheet" type="text/css" href="css/index.css">
-    <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"></script>
     <script src="index.js"></script>
   </head>
 
@@ -35,6 +36,7 @@
             <div id="image-map">
                 <script>
                   var map = L.map('image-map', {
+                    attributionControl: false,
                     zoomControl: false,
                     minZoom: 1,
                     maxZoom: 4,
@@ -54,6 +56,40 @@
                   L.imageOverlay(url, bounds).addTo(map);
 
                   map.setMaxBounds(bounds);
+
+                  var popupP1 = L.popup({popupAnchor: [-20, 0]})
+                    .setContent("<b>Palco 1</b></br><a href='poster-list-concerts.html'>Cartaz</a>");
+                  var popupP2 = L.popup()
+                    .setContent("<b>Palco 2</b></br><a href='poster-list-concerts-2.html'>Cartaz</a>");
+                  var popupP3 = L.popup()
+                    .setContent("<b>Palco 3</b></br><a href='poster-list-concerts-3.html'>Cartaz</a>");
+                  var popupP4 = L.popup()
+                    .setContent("<b>Palco 4</b></br><a href='poster-list-concerts-4.html'>Cartaz</a>");
+
+                  var popupR1 = L.popup()
+                    .setContent("<b>Zona de Restauração</b><br>McDonalds, Pizza Hut");
+                  var popupR2 = L.popup()
+                    .setContent("<b>Zona de Restauração</b><br>Pizza Hut, Burguer King");
+                  var popupR3 = L.popup()
+                    .setContent("<b>Zona de Restauração</b><br>SubWay, TacoBell");
+
+                  var popupWC = L.popup()
+                    .setContent("<b>Casas de Banho</b>");
+
+                  var markerP1 = L.marker([-29, 32],{opacity:0}).bindPopup(popupP1).addTo(map);
+                  var markerP2 = L.marker([-66.5, 56.6],{opacity:0}).bindPopup(popupP2).addTo(map);
+                  var markerP3 = L.marker([-21, 99.6],{opacity:0}).bindPopup(popupP3).addTo(map);
+                  var markerP4 = L.marker([-78, 105.1],{opacity:0}).bindPopup(popupP4).addTo(map);
+
+                  var markerR1 = L.marker([-22, 63.3],{opacity:0}).bindPopup(popupR1).addTo(map);
+                  var markerR2 = L.marker([-63.5, 84.9],{opacity:0}).bindPopup(popupR2).addTo(map);
+                  var markerR3 = L.marker([-48.25, 98],{opacity:0}).bindPopup(popupR3).addTo(map);
+
+                  var markerWC1 = L.marker([-48.75, 49],{opacity:0}).bindPopup(popupWC).addTo(map);
+                  var markerWC2 = L.marker([-24, 75.5],{opacity:0}).bindPopup(popupWC).addTo(map);
+                  var markerWC3 = L.marker([-53.75, 75],{opacity:0}).bindPopup(popupWC).addTo(map);
+                  var markerWC4 = L.marker([-56, 105.8],{opacity:0}).bindPopup(popupWC).addTo(map);
+
                 </script>
               </div>
           </div>
